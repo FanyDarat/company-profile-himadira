@@ -32,39 +32,56 @@ const staffImages = [
 let coreIndex = 0;
 let staffIndex = 0;
 
-
-function updateSlide(type) {
-    if (type === "core") {
-        document.getElementById("coreSlide").src = coreImages[coreIndex];
-    } else {
-        document.getElementById("staffSlide").src = staffImages[staffIndex];
-    }
-}
-
 function nextSlide(type) {
-    if (type === "core") {
-        coreIndex = (coreIndex + 1) % coreImages.length;
-        updateSlide("core");
-    } else {
-        staffIndex = (staffIndex + 1) % staffImages.length;
-        updateSlide("staff");
-    }
+    let img = document.getElementById(type + "Slide");
+    let anim = img.parentElement;
+
+    let list = type === "core" ? coreImages : staffImages;
+    let index = type === "core" ? coreIndex : staffIndex;
+
+    anim.style.transform = "translateX(-20%)";
+
+    setTimeout(() => {
+        index = (index + 1) % list.length;
+
+        img.src = list[index];
+
+        anim.style.transition = "none";
+        anim.style.transform = "translateX(20%)";
+
+        setTimeout(() => {
+            anim.style.transition = "transform 0.4s ease";
+            anim.style.transform = "translateX(0)";
+        }, 10);
+
+        if (type === "core") coreIndex = index;
+        else staffIndex = index;
+    }, 400);
 }
 
 function prevSlide(type) {
-    if (type === "core") {
-        coreIndex = (coreIndex - 1 + coreImages.length) % coreImages.length;
-        updateSlide("core");
-    } else {
-        staffIndex = (staffIndex - 1 + staffImages.length) % staffImages.length;
-        updateSlide("staff");
-    }
-}
+    let img = document.getElementById(type + "Slide");
+    let anim = img.parentElement;
 
-// ===========================
-// AUTO SLIDE (10 DETIK)
-// ===========================
-setInterval(() => {
-    nextSlide("core");
-    nextSlide("staff");
-}, 10000);
+    let list = type === "core" ? coreImages : staffImages;
+    let index = type === "core" ? coreIndex : staffIndex;
+
+    anim.style.transform = "translateX(20%)";
+
+    setTimeout(() => {
+        index = (index - 1 + list.length) % list.length;
+
+        img.src = list[index];
+
+        anim.style.transition = "none";
+        anim.style.transform = "translateX(-20%)";
+
+        setTimeout(() => {
+            anim.style.transition = "transform 0.4s ease";
+            anim.style.transform = "translateX(0)";
+        }, 10);
+
+        if (type === "core") coreIndex = index;
+        else staffIndex = index;
+    }, 400);
+}
