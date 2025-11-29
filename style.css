@@ -388,6 +388,82 @@ body {
 }
 
 
+/* Container kedua slider berdampingan */
+.slider-duo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px 20px;
+    flex-wrap: wrap; /* agar responsif */
+}
+
+/* Card masing-masing slider */
+.slider-block {
+    width: 45%; /* agar pas berdampingan */
+    text-align: center;
+}
+
+/* Membesarkan slider 1.5x */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 450px; /* 1.5x lebih besar */
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-frame {
+    width: 100%;
+    height: 400px; /* diperbesar */
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slide-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Tombol kiri/kanan */
+.slide-btn {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 26px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.slide-btn:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+/* Responsif HP: slider turun ke bawah */
+@media (max-width: 768px) {
+    .slider-duo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slider-block {
+        width: 90%;
+    }
+
+    .slide-frame {
+        height: 260px;
+    }
+}
+
+
+
 
 /* Responsive design */
 @media (max-width: 768px) {

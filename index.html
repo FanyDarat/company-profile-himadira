@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HIMADIRA - Company Profile</title>
+    <script src="index.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,6 +40,7 @@
 
     <section id="filosofi"  class="section bg-light">
         <h2>Filosofi</h2>
+        <img src="images/logo_hima/Logo Kabinet.png" alt="Logo Kabinet HIMADIRA" class="hero-logo">
         <div class="cards">
             <div class="card">
                 <p>
@@ -96,6 +98,40 @@
             </div>
         </div>
     </section>
+
+    <section class="section slider-duo">
+    
+    <div class="slider-block">
+        <h2>Core of The Month</h2>
+
+        <div class="slider-container">
+            <button class="slide-btn prev" onclick="prevSlide('core')">❮</button>
+
+            <div class="slide-frame">
+                <img id="coreSlide" src="images/core/3 (2).jpg" alt="Core of The Month">
+            </div>
+
+            <button class="slide-btn next" onclick="nextSlide('core')">❯</button>
+        </div>
+    </div>
+
+    <div class="slider-block">
+        <h2>Staff of The Month</h2>
+
+        <div class="slider-container">
+            <button class="slide-btn prev" onclick="prevSlide('staff')">❮</button>
+
+            <div class="slide-frame">
+                <img id="staffSlide" src="images/staff/3.jpg" alt="Staff of The Month">
+            </div>
+
+            <button class="slide-btn next" onclick="nextSlide('staff')">❯</button>
+        </div>
+    </div>
+
+</section>
+
+
 
     <!-- <section id="activities" class="section bg-light">
         <h2>Kegiatan Himpunan</h2>
