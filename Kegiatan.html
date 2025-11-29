@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Kegiatan</title>
 
+    <script src="kegiatan.js" defer></script>
     <link rel="stylesheet" href="kegiatan.css">
 </head>
 
@@ -20,8 +21,8 @@
     </nav>
 
     <div class="hero-content">
-        <img src="images/Hima.png" alt="Logo HIMADIRA" class="hero-logo">
-        <img src="images/Logo Kabinet.png" alt="Logo Kabinet HIMADIRA" class="hero-logo">
+        <img src="images/logo_hima/Hima.png" alt="Logo HIMADIRA" class="hero-logo">
+        <img src="images/logo_hima/Logo Kabinet.png" alt="Logo Kabinet HIMADIRA" class="hero-logo">
         <h2>List Kegiatan Kontribusi Aksi</h2>
         <p>Universitas Telkom</p>
     </div>
@@ -30,13 +31,13 @@
 <div class="container">
     <div class="kegiatan-grid">
 
-        <div class="kegiatan-box" onclick="openGallery(['images/Welcoming-Party.jpg'])">
-            <img src="images/Welcoming-Party.jpg" alt="Welcoming Party">
+        <div class="kegiatan-box" onclick="openGallery(['images/kegiatan/Welcoming-Party.jpg'])">
+            <img src="images/kegiatan/Welcoming-Party.jpg" alt="Welcoming Party">
             <h3>Welcoming Party</h3>
         </div>
 
-        <div class="kegiatan-box" onclick="openGallery(['images/KabinetHima-2425.jpg'])">
-            <img src="images/KabinetHima-2425.jpg" alt="First Meet">
+        <div class="kegiatan-box" onclick="openGallery(['images/kegiatan/KabinetHima-2425.jpg'])">
+            <img src="images/kegiatan/KabinetHima-2425.jpg" alt="First Meet">
             <h3>First Meet Kabinet Kontribusi Aksi</h3>
         </div>
 
@@ -62,44 +63,5 @@
         <button onclick="nextImage()">&#10095;</button>
     </div>
 </div>
-
-<script>
-    let galleryImages = [];
-    let currentIndex = 0;
-
-    function openGallery(images) {
-        galleryImages = images;
-        currentIndex = 0;
-        document.getElementById("galleryImage").src = galleryImages[currentIndex];
-        document.getElementById("popupGallery").style.display = "flex";
-    }
-
-    function closeGallery() {
-        document.getElementById("popupGallery").style.display = "none";
-    }
-
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % galleryImages.length;
-        document.getElementById("galleryImage").src = galleryImages[currentIndex];
-    }
-
-    function prevImage() {
-        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-        document.getElementById("galleryImage").src = galleryImages[currentIndex];
-    }
-
-    // Click di luar gambar untuk close
-    document.getElementById("popupGallery").addEventListener("click", function (e) {
-        if (e.target === this) closeGallery();
-    });
-
-    document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-        closeGallery();
-    }
-
-});
-</script>
-
 </body>
 </html>

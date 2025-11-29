@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divisi - Himpunan</title>
+    <script src="divisi.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,8 +20,8 @@
         </nav>
 
         <div class="hero-content">
-            <img src="images/Hima.png" alt="Logo HIMADIRA" class="hero-logo"> 
-            <img src="images/Logo Kabinet.png" alt="Logo Kabinet HIMADIRA" class="hero-logo">
+            <img src="images/logo_hima/Hima.png" alt="Logo HIMADIRA" class="hero-logo"> 
+            <img src="images/logo_hima/Logo Kabinet.png" alt="Logo Kabinet HIMADIRA" class="hero-logo">
             <h2>Struktur Kabinet & Proker Kontribusi Aksi</h2>
             <p>Universitas Telkom</p>
         </div>
@@ -58,7 +59,7 @@
         
         <div class="logo-grid" id="biro-grid">
             <div class="logo-item" onclick="showDivisiDetail('administrasi')">
-                <img src="images/Administrasi.png" alt="Logo Administrasi">
+                <img src="images/logo_hima/Administrasi.png" alt="Logo Administrasi">
                 <div class="logo-hover">
                     <h4>Administrasi</h4>
                     <p>Klik untuk detail</p>
@@ -66,7 +67,7 @@
             </div>
 
             <div class="logo-item" onclick="showDivisiDetail('keuangan')">
-                <img src="images/Keuangan.png" alt="Logo Keuangan">
+                <img src="images/logo_hima/Keuangan.png" alt="Logo Keuangan">
                 <div class="logo-hover">
                     <h4>Keuangan</h4>
                     <p>Klik untuk detail</p>
@@ -74,7 +75,7 @@
             </div>
 
             <div class="logo-item" onclick="showDivisiDetail('minfo')">
-                <img src="images/MINFO.png" alt="Logo Minfo">
+                <img src="images/logo_hima/MINFO.png" alt="Logo Minfo">
                 <div class="logo-hover">
                     <h4>Media Informasi</h4>
                     <p>Klik untuk detail</p>
@@ -82,7 +83,7 @@
             </div>
 
             <div class="logo-item" onclick="showDivisiDetail('mo')">
-                <img src="images/MO.png" alt="Logo MO">
+                <img src="images/logo_hima/MO.png" alt="Logo MO">
                 <div class="logo-hover">
                     <h4>Manajerial Organisasi</h4>
                     <p>Klik untuk detail</p>
@@ -94,7 +95,7 @@
         
         <div class="logo-grid" id="departemen-grid">
             <div class="logo-item" onclick="showDivisiDetail('internal')">
-                <img src="images/Internal.png" alt="Logo Internal">
+                <img src="images/logo_hima/Internal.png" alt="Logo Internal">
                 <div class="logo-hover">
                     <h4>Internal</h4>
                     <p>Klik untuk detail</p>
@@ -102,7 +103,7 @@
             </div>
 
             <div class="logo-item" onclick="showDivisiDetail('eksternal')">
-                <img src="images/Eksternal.png" alt="Logo Eksternal">
+                <img src="images/logo_hima/Eksternal.png" alt="Logo Eksternal">
                 <div class="logo-hover">
                     <h4>Eksternal</h4>
                     <p>Klik untuk detail</p>
@@ -110,7 +111,7 @@
             </div>
 
             <div class="logo-item" onclick="showDivisiDetail('kaderisasi')">
-                <img src="images/Kaderisasi.png" alt="Logo Kaderisasi">
+                <img src="images/logo_hima/Kaderisasi.png" alt="Logo Kaderisasi">
                 <div class="logo-hover">
                     <h4>Kaderisasi</h4>
                     <p>Klik untuk detail</p>
@@ -118,7 +119,7 @@
             </div>
 
             <div class="logo-item" onclick="showDivisiDetail('ppa')">
-                <img src="images/PPA.png" alt="Logo PPA">
+                <img src="images/logo_hima/PPA.png" alt="Logo PPA">
                 <div class="logo-hover">
                     <h4>PPA</h4>
                     <p>Klik untuk detail</p>
@@ -126,7 +127,7 @@
             </div>
 
             <div class="logo-item" onclick="showDivisiDetail('ekraf')">
-                <img src="images/Ekraf.png" alt="Logo Ekraf">
+                <img src="images/logo_hima/Ekraf.png" alt="Logo Ekraf">
                 <div class="logo-hover">
                     <h4>Ekonomi Kreatif</h4>
                     <p>Klik untuk detail</p>
@@ -134,7 +135,7 @@
             </div>
 
             <div class="logo-item" onclick="showDivisiDetail('orsenbud')">
-                <img src="images/Orsenbud.png" alt="Logo Orsenbud">
+                <img src="images/logo_hima/Orsenbud.png" alt="Logo Orsenbud">
                 <div class="logo-hover">
                     <h4>Orsenbud</h4>
                     <p>Klik untuk detail</p>
@@ -145,121 +146,6 @@
         <div id="divisi-detail-container"></div>
 
     </section>
-
-    <script>
-        function showDivisiDetail(divisiId) {
-            const container = document.getElementById('divisi-detail-container');
-            let detailHTML = '';
-
-            // Data untuk setiap divisi
-            const divisiData = {
-                'internal': {
-                    logo: 'images/Internal.png',
-                    photo: 'images/Internal.JPG',
-                    title: 'Internal',
-                    description: 'Departemen Internal bertanggung jawab untuk menjaga keharmonisan dan koordinasi internal keluarga mahasiswa melalui pengelolaan komunikasi, apresiasi, dan pola pengadvokasian keluarga mahasiswa.',
-                    proker: ['DIRA Talk', 'DIRA Proud', 'Lapor DIRA', 'Dies Natalis RPLA', 'Rantai Komando'],
-                    link: 'https://www.instagram.com/p/DPioL2JExBZ/?img_index=1'
-                },
-                'eksternal': {
-                    logo: 'images/Eksternal.png',
-                    photo: 'images/Eksternal.JPG',
-                    title: 'External',
-                    description: 'Departemen Eksternal berperan menjalin hubungan strategis dengan pihak luar, termasuk industri, alumni, masyarakat, dan lembaga serupa melalui kolaborasi, pengabdian masyarakat, dan kajian isu strategis.',
-                    proker: ['Studi Banding', 'Kunjungan Industri', 'Bina Desa Teknologi', 'DIRA Mengabdi', 'Kajian Isu Strategis', 'PPK Ormawa'],
-                    link: 'https://www.instagram.com/p/DPioID9ExyS/?img_index=1'
-                },
-                'kaderisasi': {
-                    logo: 'images/Kaderisasi.png',
-                    photo: 'images/Kaderisasi.JPG',
-                    title: 'Kaderisasi',
-                    description: 'Departemen Kaderisasi fokus pada pembinaan dan pengembangan keluarga mahasiswa baru melalui pada kaderisasi, peningkatan kompetensi kepemimpinan dan penguatan solidaritas antar keluarga mahasiswa.',
-                    proker: ['Welcoming Party', 'Kaderisasi ONION', 'Upgrading Pengurus', 'Traning Manajemen Waktu dan Konflik', 'Penjahiman'],
-                    link: 'https://www.instagram.com/p/DPioDr3Ew6o/?img_index=1'
-                },
-                'ppa': {
-                    logo: 'images/PPA.png',
-                    photo: 'images/PPA.JPG',
-                    title: 'Pengembangan Potensi Akademik',
-                    description: 'Departemen Pengembangan Potensi Akademik mendukung pengembangan kamampuan akademik keluarga mahasiswa melalui pendampingan, kompetisi, dan program inovasi berbasis teknologi untuk menciptakan keluarga mahasiswa yang unggul dan adaptif.',
-                    proker: ['DIRA Berkarya', 'Responsi', 'DIRA Pintar', 'Coding Challenges', 'SECOMP (Software Engineering Competition)'],
-                    link: 'https://www.instagram.com/p/DPin_nWEyuf/?img_index=1'
-                },
-                'ekraf': {
-                    logo: 'images/Ekraf.png',
-                    photo: 'images/Ekraf.JPG',
-                    title: 'Ekonomi Kreatif',
-                    description: 'Departemen Ekonomi Kreatif mendorong jiwa kewirausahaan keluarga mahasiswa melalui training presentasi bisnis, pengelolaan usaha kreatif, dan penyediaan peluang usaha berbasis kebutuhan keluarga mahasiswa.',
-                    proker: ['DIRA Store', 'Training Presentasi Bisnis', 'Makan Murah DIRA'],
-                    link: 'https://www.instagram.com/p/DPin6unk8-t/?img_index=1'
-                },
-                'orsenbud': {
-                    logo: 'images/Orsenbud.png',
-                    photo: 'images/Orsenbud.JPG',
-                    title: 'Olahraga Seni dan Budaya',
-                    description: 'Departemen Olahraga Seni dan Budaya memfasilitasi pengembangan minat dan bakat keluarga mahasiswa dalam bidang olahraga seni, dan budaya melalui kegiatan yang kreatif dan inklusif untuk mempererat kekeluargaan.',
-                    proker: ['Fun Match Olahraga', 'DIRA Move Night', 'DIRA Running', 'DIRA Berbakat'],
-                    link: 'https://www.instagram.com/p/DPinz52k98k/?img_index=1'
-                },
-                'administrasi': {
-                    logo: 'images/Administrasi.png',
-                    photo: 'images/Administrasi.JPG',
-                    title: 'Administrasi',
-                    description: 'Menyelenggarakan pengarsipan dan pengelolaan terhadap seluruh administrasi himpunan.',
-                    link: 'https://www.instagram.com/p/DPiopNuky3Y/?img_index=1'
-                },
-                'keuangan': {
-                    logo: 'images/Keuangan.png',
-                    photo: 'images/Keuangan.JPG',
-                    title: 'Keuangan',
-                    description: 'Menyelenggarakan perencanaan dan pengelolaan terhadap keuangan himpunan',
-                    link: 'https://www.instagram.com/p/DPiog7lk7sP/?img_index=1'
-                },
-                'minfo': {
-                    logo: 'images/MINFO.png',
-                    photo: 'images/MINFO.JPG',
-                    title: 'Media Informasi',
-                    description: 'Menyediakan akses infomasi dan pengelolaan media sosial himpunan',
-                    link: 'https://www.instagram.com/p/DPioUXek7iD/?img_index=1'
-                },
-                'mo': {
-                    logo: 'images/MO.png',
-                    photo: 'images/MO.JPG',
-                    title: 'Manajerial Organisasi',
-                    description: 'Melakukan pengelolaan dan monitoring kepada aparetur himpunan.',
-                    link: 'https://www.instagram.com/p/DPiocgzk0Ng/?img_index=1'
-                }
-            };
-
-            const divisi = divisiData[divisiId];
-            
-           if (divisi) {
-            detailHTML = `
-                <div class="divisi-box">
-                    <img src="${divisi.logo}" class="divisi-logo" alt="Logo ${divisi.title}">
-                    <img src="${divisi.photo}" class="divisi-photo" alt="Foto ${divisi.title}">
-                    <h2>${divisi.title}</h2>
-                    <p>${divisi.description}</p>
-                    ${divisi.proker ? `
-                        <h3>Program Kerja</h3>
-                        ${divisi.proker.map(item => `<h5>${item}</h5>`).join('')}
-                    ` : ''}
-                    <div class="button-container">
-                        ${divisi.link ? `<button class="instagram-btn" onclick="window.open('${divisi.link}', '_blank')">Lihat Instagram</button>` : ''}
-                        <button class="close-btn" onclick="closeDivisiDetail()">Tutup</button>
-                    </div>
-                </div>
-            `;
-        }
-
-            container.innerHTML = detailHTML;
-            container.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function closeDivisiDetail() {
-            document.getElementById('divisi-detail-container').innerHTML = '';
-        }
-    </script>
 
 </body>
 </html>
